@@ -84,7 +84,7 @@ export default function ContactPage() {
           <motion.form
             initial="hidden"
             animate="visible"
-            action="https://formspree.io/f/xplaceholder"
+            action="https://formspree.io/f/xnjbjvng"
             method="POST"
             onSubmit={() => setSubmitted(true)}
             className="mt-12 space-y-6"
