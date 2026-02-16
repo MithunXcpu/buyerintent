@@ -60,7 +60,7 @@ export default function DemoPage() {
       {/* Nav */}
       <nav className="sticky top-0 z-50 border-b border-border bg-base/80 backdrop-blur-md">
         <div className="mx-auto flex max-w-6xl items-center justify-between px-6 py-4">
-          <Link href="/" className="text-xl font-bold text-amber">
+          <Link href="/" className="text-xl font-bold text-red">
             IntentSight
           </Link>
           <Link
@@ -103,16 +103,16 @@ export default function DemoPage() {
               <div className="absolute inset-0 bg-gradient-to-br from-surface to-card" />
               <button
                 onClick={() => setIsPlaying(!isPlaying)}
-                className="relative z-10 flex h-20 w-20 items-center justify-center rounded-full bg-amber/20 transition-colors hover:bg-amber/30"
+                className="relative z-10 flex h-20 w-20 items-center justify-center rounded-full bg-red/20 transition-colors hover:bg-red/30"
               >
                 <Play
-                  className={`h-8 w-8 text-amber ${isPlaying ? "hidden" : ""}`}
+                  className={`h-8 w-8 text-red ${isPlaying ? "hidden" : ""}`}
                   fill="currentColor"
                 />
                 {isPlaying && (
                   <div className="flex gap-1">
-                    <div className="h-6 w-1.5 rounded-full bg-amber" />
-                    <div className="h-6 w-1.5 rounded-full bg-amber" />
+                    <div className="h-6 w-1.5 rounded-full bg-red" />
+                    <div className="h-6 w-1.5 rounded-full bg-red" />
                   </div>
                 )}
               </button>
@@ -138,7 +138,7 @@ export default function DemoPage() {
               <div className="relative">
                 {/* Track */}
                 <div className="h-2 w-full rounded-full bg-surface">
-                  <div className="h-2 w-5/12 rounded-full bg-amber/50" />
+                  <div className="h-2 w-5/12 rounded-full bg-red/50" />
                 </div>
                 {/* Dots */}
                 <div className="mt-4 flex flex-wrap gap-3">
@@ -229,7 +229,7 @@ export default function DemoPage() {
                       strokeWidth="10"
                       strokeLinecap="round"
                       strokeDasharray={`${buySignalScore * 4.4} 440`}
-                      className="text-amber"
+                      className="text-red"
                     />
                   </svg>
                   <div className="absolute flex flex-col items-center">
@@ -267,7 +267,7 @@ export default function DemoPage() {
                 </div>
                 <div className="flex items-center justify-between">
                   <span className="text-sm text-muted">Positive Reactions</span>
-                  <span className="text-sm font-semibold text-teal">
+                  <span className="text-sm font-semibold text-rose-400">
                     23
                   </span>
                 </div>
@@ -279,7 +279,7 @@ export default function DemoPage() {
                 </div>
                 <div className="flex items-center justify-between">
                   <span className="text-sm text-muted">Peak Engagement</span>
-                  <span className="text-sm font-semibold text-amber">
+                  <span className="text-sm font-semibold text-red">
                     3:55
                   </span>
                 </div>
@@ -290,11 +290,11 @@ export default function DemoPage() {
             <motion.div
               variants={fadeUp}
               custom={4}
-              className="rounded-xl border border-amber/30 bg-amber/5 p-6"
+              className="rounded-xl border border-red/30 bg-red/5 p-6"
             >
               <div className="mb-3 flex items-center gap-2">
-                <Zap className="h-5 w-5 text-amber" />
-                <h3 className="text-sm font-semibold text-amber">
+                <Zap className="h-5 w-5 text-red" />
+                <h3 className="text-sm font-semibold text-red">
                   AI Recommendation
                 </h3>
               </div>

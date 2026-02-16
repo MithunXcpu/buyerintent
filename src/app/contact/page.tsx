@@ -29,7 +29,7 @@ export default function ContactPage() {
       {/* Nav */}
       <nav className="sticky top-0 z-50 border-b border-border bg-base/80 backdrop-blur-md">
         <div className="mx-auto flex max-w-6xl items-center justify-between px-6 py-4">
-          <Link href="/" className="text-xl font-bold text-amber">
+          <Link href="/" className="text-xl font-bold text-red">
             IntentSight
           </Link>
           <Link
@@ -75,7 +75,7 @@ export default function ContactPage() {
             </p>
             <Link
               href="/"
-              className="mt-6 inline-block rounded-lg bg-amber px-6 py-3 text-sm font-semibold text-base transition-colors hover:bg-amber-light"
+              className="mt-6 inline-block rounded-lg bg-red px-6 py-3 text-sm font-semibold text-base transition-colors hover:bg-red-light"
             >
               Back to Home
             </Link>
@@ -104,7 +104,7 @@ export default function ContactPage() {
                 name="name"
                 required
                 placeholder="Your full name"
-                className="w-full rounded-lg border border-border bg-card px-4 py-3 text-white placeholder-muted/60 outline-none transition-colors focus:border-amber"
+                className="w-full rounded-lg border border-border bg-card px-4 py-3 text-white placeholder-muted/60 outline-none transition-colors focus:border-red"
               />
             </motion.div>
 
@@ -123,7 +123,7 @@ export default function ContactPage() {
                 name="email"
                 required
                 placeholder="you@company.com"
-                className="w-full rounded-lg border border-border bg-card px-4 py-3 text-white placeholder-muted/60 outline-none transition-colors focus:border-amber"
+                className="w-full rounded-lg border border-border bg-card px-4 py-3 text-white placeholder-muted/60 outline-none transition-colors focus:border-red"
               />
             </motion.div>
 
@@ -141,7 +141,7 @@ export default function ContactPage() {
                 id="company"
                 name="company"
                 placeholder="Your company name"
-                className="w-full rounded-lg border border-border bg-card px-4 py-3 text-white placeholder-muted/60 outline-none transition-colors focus:border-amber"
+                className="w-full rounded-lg border border-border bg-card px-4 py-3 text-white placeholder-muted/60 outline-none transition-colors focus:border-red"
               />
             </motion.div>
 
@@ -160,7 +160,7 @@ export default function ContactPage() {
                 required
                 rows={5}
                 placeholder="Tell us about your needs..."
-                className="w-full resize-none rounded-lg border border-border bg-card px-4 py-3 text-white placeholder-muted/60 outline-none transition-colors focus:border-amber"
+                className="w-full resize-none rounded-lg border border-border bg-card px-4 py-3 text-white placeholder-muted/60 outline-none transition-colors focus:border-red"
               />
             </motion.div>
 
@@ -168,7 +168,7 @@ export default function ContactPage() {
             <motion.div variants={fadeUp} custom={6}>
               <button
                 type="submit"
-                className="inline-flex w-full items-center justify-center gap-2 rounded-lg bg-amber px-6 py-3 font-semibold text-base transition-colors hover:bg-amber-light"
+                className="inline-flex w-full items-center justify-center gap-2 rounded-lg bg-red px-6 py-3 font-semibold text-base transition-colors hover:bg-red-light"
               >
                 <Send className="h-4 w-4" />
                 Send Message

@@ -39,7 +39,7 @@ const stats = [
     label: "High-Intent",
     value: "34",
     change: "23% of total",
-    changeColor: "text-amber",
+    changeColor: "text-red",
   },
   {
     icon: BarChart3,
@@ -96,11 +96,11 @@ const recentSessions = [
 function getStatusColor(status: string): string {
   switch (status) {
     case "High Intent":
-      return "bg-amber/10 text-amber";
+      return "bg-red/10 text-red";
     case "Ready to Buy":
       return "bg-success/10 text-success";
     case "Interested":
-      return "bg-teal/10 text-teal";
+      return "bg-rose-400/10 text-rose-400";
     case "Skeptical":
       return "bg-skeptical/10 text-skeptical";
     case "Engaged":
@@ -118,7 +118,7 @@ export default function DashboardPage() {
       {/* Nav */}
       <nav className="sticky top-0 z-50 border-b border-border bg-base/80 backdrop-blur-md">
         <div className="mx-auto flex max-w-6xl items-center justify-between px-6 py-4">
-          <Link href="/" className="text-xl font-bold text-amber">
+          <Link href="/" className="text-xl font-bold text-red">
             IntentSight
           </Link>
           <Link
@@ -159,7 +159,7 @@ export default function DashboardPage() {
               className="rounded-xl border border-border bg-card p-6 transition-colors hover:bg-card-hover"
             >
               <div className="mb-3 flex items-center justify-between">
-                <stat.icon className="h-5 w-5 text-amber" />
+                <stat.icon className="h-5 w-5 text-red" />
                 <span className={`text-xs ${stat.changeColor}`}>
                   {stat.change}
                 </span>
@@ -195,7 +195,7 @@ export default function DashboardPage() {
                       {item.value}%
                     </span>
                     <div
-                      className="w-full rounded-t-md bg-amber transition-all duration-500"
+                      className="w-full rounded-t-md bg-red transition-all duration-500"
                       style={{
                         height: `${(item.value / maxValue) * 100}%`,
                       }}
@@ -243,19 +243,19 @@ export default function DashboardPage() {
                 <div>
                   <div className="mb-1 flex justify-between text-sm">
                     <span className="text-muted">51-75% (Good)</span>
-                    <span className="text-teal">63</span>
+                    <span className="text-rose-400">63</span>
                   </div>
                   <div className="h-2 rounded-full bg-surface">
-                    <div className="h-2 w-5/12 rounded-full bg-teal" />
+                    <div className="h-2 w-5/12 rounded-full bg-rose-400" />
                   </div>
                 </div>
                 <div>
                   <div className="mb-1 flex justify-between text-sm">
                     <span className="text-muted">76-100% (High)</span>
-                    <span className="text-amber">34</span>
+                    <span className="text-red">34</span>
                   </div>
                   <div className="h-2 rounded-full bg-surface">
-                    <div className="h-2 w-1/4 rounded-full bg-amber" />
+                    <div className="h-2 w-1/4 rounded-full bg-red" />
                   </div>
                 </div>
               </div>
@@ -308,7 +308,7 @@ export default function DashboardPage() {
                         <div className="flex items-center gap-2">
                           <div className="h-2 w-16 rounded-full bg-surface">
                             <div
-                              className="h-2 rounded-full bg-amber"
+                              className="h-2 rounded-full bg-red"
                               style={{ width: `${session.score}%` }}
                             />
                           </div>

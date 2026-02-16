@@ -72,7 +72,7 @@ export default function PricingPage() {
       {/* Nav */}
       <nav className="sticky top-0 z-50 border-b border-border bg-base/80 backdrop-blur-md">
         <div className="mx-auto flex max-w-6xl items-center justify-between px-6 py-4">
-          <Link href="/" className="text-xl font-bold text-amber">
+          <Link href="/" className="text-xl font-bold text-red">
             IntentSight
           </Link>
           <Link
@@ -119,13 +119,13 @@ export default function PricingPage() {
               custom={i + 2}
               className={`relative flex flex-col rounded-2xl border p-8 ${
                 tier.highlighted
-                  ? "border-amber bg-card shadow-lg shadow-amber/5"
+                  ? "border-red bg-card shadow-lg shadow-red/5"
                   : "border-border bg-card"
               }`}
             >
               {tier.highlighted && (
                 <div className="absolute -top-4 left-1/2 -translate-x-1/2">
-                  <span className="inline-flex items-center gap-1 rounded-full bg-amber px-4 py-1 text-xs font-bold text-base">
+                  <span className="inline-flex items-center gap-1 rounded-full bg-red px-4 py-1 text-xs font-bold text-base">
                     <Sparkles className="h-3 w-3" />
                     Most Popular
                   </span>
@@ -152,7 +152,7 @@ export default function PricingPage() {
               <ul className="mb-8 flex-1 space-y-3">
                 {tier.features.map((feature) => (
                   <li key={feature} className="flex items-start gap-3">
-                    <Check className="mt-0.5 h-4 w-4 shrink-0 text-amber" />
+                    <Check className="mt-0.5 h-4 w-4 shrink-0 text-red" />
                     <span className="text-sm text-muted">{feature}</span>
                   </li>
                 ))}
@@ -162,7 +162,7 @@ export default function PricingPage() {
                 href="/contact"
                 className={`block rounded-lg py-3 text-center text-sm font-semibold transition-colors ${
                   tier.highlighted
-                    ? "bg-amber text-base hover:bg-amber-light"
+                    ? "bg-red text-base hover:bg-red-light"
                     : "border border-border text-white hover:border-muted hover:bg-surface"
                 }`}
               >
@@ -185,7 +185,7 @@ export default function PricingPage() {
             Have questions?{" "}
             <Link
               href="/contact"
-              className="font-semibold text-amber transition-colors hover:text-amber-light"
+              className="font-semibold text-red transition-colors hover:text-red-light"
             >
               Get in touch
             </Link>{" "}

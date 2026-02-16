@@ -76,7 +76,7 @@ export default function HomePage() {
       {/* Nav */}
       <nav className="sticky top-0 z-50 border-b border-border bg-base/80 backdrop-blur-md">
         <div className="mx-auto flex max-w-6xl items-center justify-between px-6 py-4">
-          <Link href="/" className="text-xl font-bold text-amber">
+          <Link href="/" className="text-xl font-bold text-red">
             IntentSight
           </Link>
           <div className="flex items-center gap-8">
@@ -100,7 +100,7 @@ export default function HomePage() {
             </Link>
             <Link
               href="/contact"
-              className="rounded-lg bg-amber px-4 py-2 text-sm font-semibold text-base transition-colors hover:bg-amber-light"
+              className="rounded-lg bg-red px-4 py-2 text-sm font-semibold text-base transition-colors hover:bg-red-light"
             >
               Contact
             </Link>
@@ -118,7 +118,7 @@ export default function HomePage() {
           <motion.div
             variants={fadeUp}
             custom={0}
-            className="mb-4 inline-flex rounded-full border border-amber/20 bg-amber/10 px-4 py-1.5 text-sm text-amber"
+            className="mb-4 inline-flex rounded-full border border-red/20 bg-red/10 px-4 py-1.5 text-sm text-red"
           >
             AI-Powered Buyer Intent Detection
           </motion.div>
@@ -128,7 +128,7 @@ export default function HomePage() {
             className="max-w-4xl text-5xl font-bold leading-tight tracking-tight text-white md:text-6xl"
           >
             Read the room before they read{" "}
-            <span className="text-amber">your price tag</span>
+            <span className="text-red">your price tag</span>
           </motion.h1>
           <motion.p
             variants={fadeUp}
@@ -146,7 +146,7 @@ export default function HomePage() {
           >
             <Link
               href="/demo"
-              className="inline-flex items-center gap-2 rounded-lg bg-amber px-6 py-3 font-semibold text-base transition-colors hover:bg-amber-light"
+              className="inline-flex items-center gap-2 rounded-lg bg-red px-6 py-3 font-semibold text-base transition-colors hover:bg-red-light"
             >
               Try Live Demo
               <ArrowRight className="h-4 w-4" />
@@ -198,10 +198,10 @@ export default function HomePage() {
                 key={feature.title}
                 variants={fadeUp}
                 custom={i}
-                className="group rounded-xl border border-border bg-card p-8 transition-colors hover:border-amber/30 hover:bg-card-hover"
+                className="group rounded-xl border border-border bg-card p-8 transition-colors hover:border-red/30 hover:bg-card-hover"
               >
-                <div className="mb-4 inline-flex rounded-lg bg-amber/10 p-3">
-                  <feature.icon className="h-6 w-6 text-amber" />
+                <div className="mb-4 inline-flex rounded-lg bg-red/10 p-3">
+                  <feature.icon className="h-6 w-6 text-red" />
                 </div>
                 <h3 className="mb-2 text-xl font-semibold text-white">
                   {feature.title}
@@ -253,10 +253,10 @@ export default function HomePage() {
                 custom={i}
                 className="relative flex flex-col items-center text-center"
               >
-                <div className="mb-6 flex h-16 w-16 items-center justify-center rounded-2xl bg-amber/10">
-                  <step.icon className="h-8 w-8 text-amber" />
+                <div className="mb-6 flex h-16 w-16 items-center justify-center rounded-2xl bg-red/10">
+                  <step.icon className="h-8 w-8 text-red" />
                 </div>
-                <span className="mb-2 text-sm font-bold tracking-widest text-amber">
+                <span className="mb-2 text-sm font-bold tracking-widest text-red">
                   STEP {step.step}
                 </span>
                 <h3 className="mb-3 text-xl font-semibold text-white">
@@ -283,7 +283,7 @@ export default function HomePage() {
             className="text-3xl font-bold text-white md:text-4xl"
           >
             Stop guessing. Start{" "}
-            <span className="text-amber">knowing.</span>
+            <span className="text-red">knowing.</span>
           </motion.h2>
           <motion.p
             variants={fadeUp}
@@ -296,7 +296,7 @@ export default function HomePage() {
           <motion.div variants={fadeUp} custom={2} className="mt-8">
             <Link
               href="/contact"
-              className="inline-flex items-center gap-2 rounded-lg bg-amber px-8 py-4 text-lg font-semibold text-base transition-colors hover:bg-amber-light"
+              className="inline-flex items-center gap-2 rounded-lg bg-red px-8 py-4 text-lg font-semibold text-base transition-colors hover:bg-red-light"
             >
               Get Started Today
               <ArrowRight className="h-5 w-5" />
@@ -305,11 +305,35 @@ export default function HomePage() {
         </motion.div>
       </section>
 
+      {/* Get in Touch */}
+      <section className="max-w-7xl mx-auto px-6 py-16">
+        <div className="bg-[var(--color-surface)] border border-[var(--color-border)] rounded-2xl p-8 max-w-2xl mx-auto">
+          <h2 className="text-2xl font-bold text-white mb-2 text-center">Get in Touch</h2>
+          <p className="text-[var(--color-muted)] text-center mb-8">Have a question or want to work together?</p>
+          <form action="https://formspree.io/f/xnjbjvng" method="POST" className="space-y-4">
+            <input type="hidden" name="_subject" value="New message from BuyerIntent" />
+            <div>
+              <label htmlFor="name" className="block text-sm font-medium text-gray-300 mb-1">Name</label>
+              <input type="text" name="name" id="name" required className="w-full px-4 py-2.5 bg-[var(--color-base)] border border-[var(--color-border)] rounded-lg text-white placeholder-gray-500 focus:outline-none focus:border-[#ef4444] transition-colors" placeholder="Your name" />
+            </div>
+            <div>
+              <label htmlFor="email" className="block text-sm font-medium text-gray-300 mb-1">Email</label>
+              <input type="email" name="email" id="email" required className="w-full px-4 py-2.5 bg-[var(--color-base)] border border-[var(--color-border)] rounded-lg text-white placeholder-gray-500 focus:outline-none focus:border-[#ef4444] transition-colors" placeholder="you@example.com" />
+            </div>
+            <div>
+              <label htmlFor="message" className="block text-sm font-medium text-gray-300 mb-1">Message</label>
+              <textarea name="message" id="message" required rows={4} className="w-full px-4 py-2.5 bg-[var(--color-base)] border border-[var(--color-border)] rounded-lg text-white placeholder-gray-500 focus:outline-none focus:border-[#ef4444] transition-colors resize-none" placeholder="Your message..." />
+            </div>
+            <button type="submit" className="w-full px-6 py-3 bg-[#ef4444] hover:bg-[#dc2626] rounded-lg text-white font-semibold transition-colors">Send Message</button>
+          </form>
+        </div>
+      </section>
+
       {/* Footer */}
       <footer className="border-t border-border py-12">
         <div className="mx-auto flex max-w-6xl flex-col items-center justify-between gap-6 px-6 md:flex-row">
           <div>
-            <span className="text-lg font-bold text-amber">IntentSight</span>
+            <span className="text-lg font-bold text-red">IntentSight</span>
             <p className="mt-1 text-sm text-muted">
               AI-Powered Buyer Intent Detection
             </p>
