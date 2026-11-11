@@ -1,6 +1,6 @@
 # IntentSight (BuyerIntent)
 
-AI-powered buyer intent detection and lead scoring tool. Analyzes video recordings of sales calls, retail interactions, and demos to detect micro-expressions, engagement patterns, and buying signals.
+**Demo / prototype** for a sales-engineering walkthrough. The UI presents a buyer-intent product: sample emotion timelines, engagement patterns, and lead scores for sales calls, retail interactions, and similar conversations. Playback, scores, and charts are simulated in the browser with hardcoded data. This project does not analyze real video, process anything on-device, store recordings, or implement security, privacy, or compliance controls.
 
 **Live Demo**: [buyerintent.vercel.app](https://buyerintent.vercel.app)
 
@@ -31,13 +31,16 @@ AI-powered buyer intent detection and lead scoring tool. Analyzes video recordin
 3. Reference specific metrics from the demo dashboard in follow-up emails
 
 ## Features
-- Real-time emotion and behavior analysis from video
-- Buy Signal Score (0-100%) combining 47 behavioral indicators
-- Frame-by-frame emotional tracking (micro-expressions, posture, vocal tone)
-- Engagement heatmaps showing prospect attention patterns
-- Analytics dashboard with weekly trends and session history
-- Privacy-first architecture (on-device processing, SOC 2 Type II)
-- 5 industry-specific use cases
+
+What the prototype screens show (sample data, not a live analysis pipeline):
+
+- Simulated emotion and behavior playback over a fake video player
+- Buy Signal Score display (0–100%; the interactive demo uses 78%)
+- Emotion timeline with labeled moments (Curious through Ready to Buy)
+- Engagement heatmap (color-coded grid)
+- Analytics dashboard with weekly trends and a recent-sessions table
+- Pricing page (Starter $99, Professional $299, Enterprise custom) and a contact form
+- Walkthrough narrative for 5 use cases: Sales Calls, Retail, Real Estate, Car Dealerships, Trade Shows
 
 ## Tech Stack
 Next.js 16 | React 19 | TypeScript | Tailwind CSS 4 | Framer Motion | Lucide React
